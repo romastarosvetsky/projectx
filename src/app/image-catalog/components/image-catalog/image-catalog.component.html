@@ -1,0 +1,10 @@
+<app-image-catalog-filter></app-image-catalog-filter>
+
+<mat-grid-list cols="5" rowHeight="2:3" gutterSize="2em">
+  <mat-grid-tile *ngFor="let imageItem of (imageItems | async)">
+    <app-catalog-item [imageUrl]="imageItem.url"
+                      [title]="imageItem.name"
+                      [subtitle]="imageItem.format"
+                      (click)="navigateToImageDetails(imageItem.id)"></app-catalog-item>
+  </mat-grid-tile>
+</mat-grid-list>

@@ -1,0 +1,11 @@
+<div class="image-details-container">
+  <div class="image-container">
+    <img src="{{image?.url}}" alt="{{image?.name}}">
+  </div>
+  <div class="details-container">
+    <div class="title">{{image?.name}}</div>
+    <div class="description">{{image?.format}}</div>
+  </div>
+</div>
+
+<button mat-raised-button (click)="navigateToCatalog()">Back</button>

@@ -1,0 +1,15 @@
+<div class="filter-container">
+  <div>
+    <span>
+      <app-search-input [delay]="searchDelay" (valueChanged)="onSearchChanged($event)"></app-search-input>
+    </span>
+    <span>
+      <app-select [label]="'Format'" [options]="formatOptions" (valueChanged)="onFormatChanged($event)"></app-select>
+    </span>
+  </div>
+  <div>
+    <app-paginator [config]="paginationConfig | async"
+                   (pageChanged)="onPageChanged($event)">
+    </app-paginator>
+  </div>
+</div>
